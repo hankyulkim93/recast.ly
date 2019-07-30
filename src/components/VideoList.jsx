@@ -1,10 +1,15 @@
-var VideoList = () => (
-  <div className="video-list">
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
-    <div><h5><em>videoListEntry adf</em> view goes here</h5></div>
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
+// /Users/student/Public/hrsf122/hrsf122-recast.ly/src/data/exampleVideoData.js
+// /Users/student/Public/hrsf122/hrsf122-recast.ly/src/components/VideoList.jsx
+
+// ReactDOM.render(<App />, document.getElementById("app"));
+
+var VideoList = (props) => (
+  <div >
+    <div>
+      <h5><em>videoListEntry</em> </h5>
+      <VideoListEntry />
+    </div>
+
   </div>
 );
 
