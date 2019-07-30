@@ -3,13 +3,27 @@
 
 // ReactDOM.render(<App />, document.getElementById("app"));
 
-var VideoList = (props) => (
-  <div >
-    <div>
-      <h5><em>videoListEntry</em> </h5>
-      <VideoListEntry />
-    </div>
+import VideoListEntry from './VideoListEntry.js';
 
+var VideoList = (props) => (
+  <div className='video-list'>
+  {props.videos.map(video =>
+        <VideoListEntry changeVideo={props.changeVideo} video={video}/>)}
+    {/* <div>
+      <VideoListEntry video={props.videos[0]}/>
+    </div>
+    <div>
+      <VideoListEntry video={props.videos[1]}/>
+    </div>
+    <div>
+      <VideoListEntry video={props.videos[2]}/>
+    </div>
+    <div>
+      <VideoListEntry video={props.videos[3]}/>
+    </div>
+    <div>
+      <VideoListEntry video={props.videos[4]}/>
+    </div> */}
   </div>
 );
 
@@ -22,3 +36,5 @@ VideoList.propTypes = {
 // In the ES6 spec, files are "modules" and do not share a top-level scope.
 // `var` declarations will only exist globally where explicitly defined.
 export default VideoList;
+
+// REFERENCE https://medium.com/@eperiou/react-basics-19e43be02236
