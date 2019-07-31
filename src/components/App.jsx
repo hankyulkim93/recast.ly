@@ -14,37 +14,33 @@ class App extends React.Component {
   }
 
   onTitleItemClick(video) {
-    console.log(this)
+    console.log(this);
     this.setState({
       current: video
-      // this.state.current: e.target.snippet.title
     });
   }
 
   render() {
     return (
       <div>
-      <nav className="navbar">
-      <div className="col-md-6 offset-md-3">
-      <div><h5><em>search</em> view goes here</h5></div>
-      </div>
-      </nav>
-      <div className="row">
-      <div className="col-md-7">
-      {/* <div><h5><em>videoPlayer</em> view goes here</h5></div> */}
-      <div><VideoPlayer video={this.state.current}/></div>
-      </div>
-      <div className="col-md-5">
-      <div>
-      <VideoList onTitleItemClick={this.onTitleItemClick} videos={this.state.allVideos}/>
-      </div>
-      </div>
-      </div>
+        <nav className="navbar">
+          <div className="col-md-6 offset-md-3">
+            <div><h5><em>search</em> view goes here</h5></div>
+          </div>
+        </nav>
+        <div className="row">
+          <div className="col-md-7">
+            <div><VideoPlayer video={this.state.current}/></div>
+          </div>
+          <div className="col-md-5">
+            <div>
+              <VideoList onTitleItemClick={this.onTitleItemClick} videos={this.state.allVideos}/>
+            </div>
+          </div>
+        </div>
       </div>
     );
-  }
-  // var App = () => (
-    
+  }  
 }
 
 // In the ES6 spec, files are "modules" and do not share a top-level scope

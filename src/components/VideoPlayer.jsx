@@ -1,11 +1,9 @@
-var VideoPlayer = (props) => {
-  // { var srcUrl = `https://www.youtube.com/embed/${props.video.id.videoId}`; }
-  return (<div className="video-player">
+var VideoPlayer = (props) => 
+  (<div className="video-player">
 
     <div className="embed-responsive embed-responsive-16by9">
       <iframe className="embed-responsive-item" 
         src = {`https://www.youtube.com/embed/${props.video.id.videoId}`}
-        // src = {srcUrl}
         allowFullScreen> </iframe>
     </div>
 
@@ -15,7 +13,7 @@ var VideoPlayer = (props) => {
     </div>
 
   </div>);
-};
+
 
 // PropTypes tell other developers what `props` a component expects
 // Warnings will be shown in the console when the defined rules are violated

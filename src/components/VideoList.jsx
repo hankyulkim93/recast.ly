@@ -1,29 +1,9 @@
-// /Users/student/Public/hrsf122/hrsf122-recast.ly/src/data/exampleVideoData.js
-// /Users/student/Public/hrsf122/hrsf122-recast.ly/src/components/VideoList.jsx
-
-// ReactDOM.render(<App />, document.getElementById("app"));
-
 import VideoListEntry from './VideoListEntry.js';
 
 var VideoList = (props) => (
   <div className='video-list'>
     {props.videos.map(video =>
       <VideoListEntry onTitleItemClick={props.onTitleItemClick} video={video}/>)}
-    {/* <div>
-      <VideoListEntry video={props.videos[0]}/>
-    </div>
-    <div>
-      <VideoListEntry video={props.videos[1]}/>
-    </div>
-    <div>
-      <VideoListEntry video={props.videos[2]}/>
-    </div>
-    <div>
-      <VideoListEntry video={props.videos[3]}/>
-    </div>
-    <div>
-      <VideoListEntry video={props.videos[4]}/>
-    </div> */}
   </div>
 );
 
